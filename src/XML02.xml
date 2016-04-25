@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="gb2312" ?> 
+ <DataContext Name="C200">
+ <PkgDef Name="TRNHEAD">
+  <DataField Name="TRCD" Value="C200" /> 
+  <DataField Name="Timeout" Value="3000" /> 
+  <DataField Name="TLSQ" Value="00001" /> 
+  <DataField Name="UTNO" Value="0000" /> 
+  <DataField Name="SBNO" Value="0000" /> 
+  <DataField Name="TELR" Value="111222" /> 
+  <DataField Name="TRNTYPE" Value="1" /> 
+  <DataField Name="TRDT" Value="20110301" /> 
+  <DataField Name="TRTM" Value="203000" /> 
+  <DataField Name="DEVNO" Value="A1" /> 
+  <DataField Name="BRIEFCODE" Value="000" /> 
+  <DataField Name="MEMO" Value="111" /> 
+  </PkgDef>
+ <PkgDef Name="C200Req">
+  <DataField Name="TASKID" Value="213333333333333333333" /> 
+  <DataField Name="ACCOUNTNO" Value="3212112312231" /> 
+  <DataField Name="MSGCLASSID" Value="0201" /> 
+  <DataField Name="APPID" Value="000000" /> 
+  <DataField Name="ADDRESSTYPE" Value="1" /> 
+  <DataField Name="ADDRESS" Value="13011122211" /> 
+  <DataField Name="TAMPLATEFLAG" Value="1" /> 
+  <DataField Name="MSGCONTENT" Value="测试" /> 
+  <DataField Name="INURETIME" Value="201000000" /> 
+  <DataField Name="AVAILHOURS" Value="2" /> 
+ <FormDef Name="C200ReqF" Column="名称,数据值">
+ <PkgDef Name="杨凯升">
+  <DataField Name="FNAME" Value="acno" /> 
+  <DataField Name="FVALUE" Value="000001" /> 
+  </PkgDef>
+  <PkgDef Name="F_C200ReqF">
+  <DataField Name="FNAME" Value="amount" /> 
+  <DataField Name="FVALUE" Value="1000.00" /> 
+  </PkgDef>
+  </FormDef>
+  </PkgDef>
+ <PkgDef Name="C200Res">
+  <DataField Name="CKFG" Value="AAAAAAA" /> 
+  </PkgDef>
+ <PkgDef Name="STATUS">
+  <DataField Name="MGID" Value="AAAAAAA" /> 
+  <DataField Name="ERNO" Value="0001" /> 
+  <DataField Name="RTTY" Value="" /> 
+  <DataField Name="RTXT" Value="成功" /> 
+  <DataField Name="TRDT" Value="20100401" /> 
+  <DataField Name="TRTM" Value="210000" /> 
+  <DataField Name="TLSQ" Value="11111" /> 
+  <DataField Name="UTNO" Value="0000" /> 
+  <DataField Name="SBNO" Value="0000" /> 
+  <DataField Name="TELR" Value="000000" /> 
+  </PkgDef>
+  <FlowScript Name="ProcessForC200" /> 
+  </DataContext>

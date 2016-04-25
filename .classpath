@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="lib" path="src/dom4j-1.6.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="src/ant-1.6.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="src/jasperreports-3.5.3.jar"/>
+	<classpathentry kind="lib" path="src/gson-2.2.4.jar"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="src/jedis-2.4.2.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
