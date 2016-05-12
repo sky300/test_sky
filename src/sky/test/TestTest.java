@@ -7,22 +7,21 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.net.URLDecoder;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Properties;
-
-import javax.xml.crypto.URIDereferencer;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.dom4j.Document;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 
-import sky.utils.HttpUtil;
-
 public class TestTest {
-
+	transient int hashSeed = 0;
     public static void main(String[] args) throws Exception {
         // String aa= dateToString(Calendar.getInstance());
         // System.out.println(aa);
@@ -35,7 +34,42 @@ public class TestTest {
         
 //    	String str = HttpUtil.httpRequest("http://api.we7.cc/v1/simsimi.php?msg="+HttpUtil.urlEncodeUTF8("我饿了"));
 //    	System.out.println(URLDecoder.decode("\u5403\u4e86\u624d\u51cf\u80a5\u5427"));
+    	String aa = "hello";
+    	System.out.println(aa.hashCode());
+    	
+    	ConcurrentHashMap<String, String> chm = new ConcurrentHashMap<String, String>();
+    	chm.put("aaa", "bbb");
+    	
+    	List list = new ArrayList();
+    	list.add(1);
+    	list.add(2);
+    	list.add(4);
+    	list.add(21);
+    	list.add(132);
+    	list.forEach(obj -> System.out.println("www+"+obj));
+    	HashMap<String, String> map = new HashMap<String, String>();
+    	map.put(null, "hello");
+    	map.put("a", "hello");
+    	map.put("b", "hello");
+    	map.put("c", "hello");
+    	map.put("你", "hello");
+    	map.put("好", "hello");
+    	map.put("哈", "hello");
+    	map.put("中", "hello");
+    	map.put("国", "hello");
+    	map.put("最", "hello");
+    	map.put("牛", "hello");
+    	map.put("牛逼", "hello");
+    	map.put("牛逼而沃尔沃", "hello");
+    	System.out.println(19031%16);
+    	System.out.println(103%16);
+    	System.out.println("中".hashCode());
+    	System.out.println("a".hashCode());
+    	
     }
+    
+    
+    
     
     /**
      * 解析XML测试
