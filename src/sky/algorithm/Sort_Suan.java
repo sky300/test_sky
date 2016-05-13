@@ -130,7 +130,6 @@ public class Sort_Suan {
 		 * 具体如下：
 		 */
 		java.util.Arrays.sort(a);//就这一句直接的对数组其进行升序排列
-		
 		System.out.println();
 		System.out.print("这是数组排序：");
 		for(int n:a){
