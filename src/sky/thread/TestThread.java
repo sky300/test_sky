@@ -14,4 +14,11 @@ public class TestThread extends Thread{
 		}
 		super.run();
 	}
+	
+	public static void main(String[] args) {
+		for (int i = 0; i < 100; i++) {
+			new TestThread("测试").start();
+			new TestThread("测试2").start();
+		}
+	}
 }

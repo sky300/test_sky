@@ -1,5 +1,6 @@
 package sky.thread;
 
+import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
 /**
@@ -28,5 +29,21 @@ public class CallableThreadTest {
 			e.printStackTrace();
 		}
 	}
+	/**
+	 * Lambda创建线程
+	 */
+	public static void testLambda(){
+		FutureTask<Integer> ft = new FutureTask<Integer>((Callable<Integer>)()->{
+			int i =0;
+			for ( ; i < 100; i++) {
+				System.out.println(Thread.currentThread().getName()+"-->"+i);
+			}
+			return i;
+		});//使用futuretask包装callable对象
+		
+		new Thread(ft, "有返回值的线程").start();
+		
+	}
+	
 
 }
