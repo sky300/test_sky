@@ -8,7 +8,7 @@ package sky.thread;
 public class Account {
 	private String accountNo;
 	private double balance;
-	private boolean flag = false;//是否存款
+	private boolean flag = true;//是否存款
 	public String getAccountNo() {
 		return accountNo;
 	}

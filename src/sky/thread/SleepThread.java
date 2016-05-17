@@ -20,7 +20,7 @@ public class SleepThread extends Thread{
 			if(i == 10){
 				sleepThread.start();
 				try {
-					sleepThread.sleep(1000);
+					sleepThread.sleep(5000);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}

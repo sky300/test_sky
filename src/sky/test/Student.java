@@ -1,12 +1,17 @@
 package sky.test;
 
+import java.io.Serializable;
+
 /**
  * @author skyow
  *实现clone方法可重写equals方法
  */
-public class Student implements Cloneable{
+public class Student implements Cloneable ,Serializable{
+	//序列化版本号
+	private static final long serialVersionUID = 8726610315141859833L;
+	
 	private int id;
-	private String name;
+	private transient String name;//不允许序列化
 	private int age;
 	private String sex;
 	private String addr;//住址

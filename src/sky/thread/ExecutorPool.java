@@ -20,8 +20,8 @@ public class ExecutorPool implements Runnable{
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
 		//创建一个线程池，允许6条线程数
 		ExecutorService executorService = Executors.newFixedThreadPool(6);
-		Future<?> fu =  executorService.submit(new ExecutorPool());
-		Future<Integer> fc = executorService.submit(new CallableThread());
+		Future<?> fu =  executorService.submit(new ExecutorPool());//runnable接口
+		Future<Integer> fc = executorService.submit(new CallableThread());//callable接口
 		System.out.println(fu.get());
 		System.out.println((Integer)fc.get());
 		executorService.shutdown();
