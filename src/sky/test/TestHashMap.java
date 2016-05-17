@@ -21,6 +21,7 @@ public class TestHashMap {
 		tempMap.put("1", "hello");
 		tempMap.put("2", "11111");
 		tempMap.put("3", "22222");
+		tempMap.forEach((aaa,value)->System.out.println(aaa+value));
 		
 		/*
 		 * System.out.println(tempMap.keySet());
@@ -52,6 +53,7 @@ public class TestHashMap {
 			String str = ite.next();
 			System.out.println(str);
 		}
+		set.forEach(str -> System.out.println("Lambda遍历---"+str));
 		System.out.println("---------------------遍历ArrayList-------------------------------------");
 		/**
 		 * 遍历ArrayList
